@@ -15,7 +15,7 @@ const login=async(req,res,next)=>{
     if(!isMatch){
         return next(new Errorhandler("Invalid email or password",404));
     }
-    sendCookie(user,res,`Welcome ${user.name}`,201);
+    sendCookie(user,res,`Welcome ${user.name}`,200);
         
     }
      catch (error) {
