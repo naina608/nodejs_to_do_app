@@ -1,7 +1,6 @@
 const jwtToken=require("jsonwebtoken");
 const sendCookie=(user,res,message,statuscode=200)=>{
 const token=jwtToken.sign({_id:user._id},process.env.SECRET_KEY);
-    res.status(statuscode).cookie("token",token,{
     res
     .status(statuscode)
     .cookie("token", token, {
